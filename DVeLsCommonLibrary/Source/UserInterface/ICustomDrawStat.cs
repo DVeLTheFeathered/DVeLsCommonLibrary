@@ -1,7 +1,7 @@
 ﻿using RimWorld;
 using UnityEngine;
 
-namespace DVeLsCommonLibrary
+namespace DVeLsCommonLibrary.UserInterface
 {
     public interface ICustomDrawStat
     {

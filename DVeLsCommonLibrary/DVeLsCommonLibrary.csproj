@@ -62,10 +62,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Source\Drawing.cs" />
+    <Compile Include="Source\UserInterface\Drawing.cs" />
     <Compile Include="Source\HarmonyPatches\HarmonyInstance.cs" />
     <Compile Include="Source\HarmonyPatches\StatsReportUtility\DrawStatsWorkerPatch.cs" />
-    <Compile Include="Source\ICustomDrawStat.cs" />
+    <Compile Include="Source\UserInterface\ICustomDrawStat.cs" />
+    <Compile Include="Source\UserInterface\Listing_StandardExtensions.cs" />
     <Compile Include="Source\Settings\DVeLsCommonLibraryMod.cs" />
     <Compile Include="Source\Settings\DVeLsCommonLibraryModSettings.cs" />
   </ItemGroup>
@@ -109,4 +110,5 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
 </Project>
