@@ -62,6 +62,7 @@ namespace DVeLsCommonLibrary.UserInterface
             }
             float columnsTotalWidth = colWidths.Sum();
 
+            GameFont oldFont = Text.Font;
             Text.Font = GameFont.Tiny;
             bool even = false;
             float th = rect.y; // total height
@@ -78,7 +79,7 @@ namespace DVeLsCommonLibrary.UserInterface
                 th += rowHeights[i];
                 even = !even;
             }
-            Text.Font = GameFont.Small;
+            Text.Font = oldFont;
 
             return new Rect(rect.x, rect.y, columnsTotalWidth, rowsTotalHeight);
         }

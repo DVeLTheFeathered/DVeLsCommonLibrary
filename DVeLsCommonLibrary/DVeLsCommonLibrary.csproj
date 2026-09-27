@@ -67,8 +67,6 @@
     <Compile Include="Source\HarmonyPatches\StatsReportUtility\DrawStatsWorkerPatch.cs" />
     <Compile Include="Source\UserInterface\ICustomDrawStat.cs" />
     <Compile Include="Source\UserInterface\Listing_StandardExtensions.cs" />
-    <Compile Include="Source\Settings\DVeLsCommonLibraryMod.cs" />
-    <Compile Include="Source\Settings\DVeLsCommonLibraryModSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DVeLsCommonLibrary.csproj.DotSettings" />
