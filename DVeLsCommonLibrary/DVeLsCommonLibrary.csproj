@@ -81,11 +81,11 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Content Update="About\**\*" CopyToOutputDirectory="PreserveNewest" TargetPath="..\About\%(RecursiveDir)%(Filename)%(Extension)" />
-    <Content Update="Defs\**\*" CopyToOutputDirectory="PreserveNewest" TargetPath="..\Defs\%(RecursiveDir)%(Filename)%(Extension)" />
-    <Content Update="Languages\**\*" CopyToOutputDirectory="PreserveNewest" TargetPath="..\Languages\%(RecursiveDir)%(Filename)%(Extension)" />
-    <Content Update="Patches\**\*" CopyToOutputDirectory="PreserveNewest" TargetPath="..\Patches\%(RecursiveDir)%(Filename)%(Extension)" />
-    <Content Update="Textures\**\*" CopyToOutputDirectory="PreserveNewest" TargetPath="..\Textures\%(RecursiveDir)%(Filename)%(Extension)" />
+    <Content Update="About\**\*" CopyToOutputDirectory="PreserveNewest" TargetPath="..\%(Identity)" />
+    <Content Update="Defs\**\*" CopyToOutputDirectory="PreserveNewest" TargetPath="..\%(Identity)" />
+    <Content Update="Languages\**\*" CopyToOutputDirectory="PreserveNewest" TargetPath="..\%(Identity)" />
+    <Content Update="Patches\**\*" CopyToOutputDirectory="PreserveNewest" TargetPath="..\%(Identity)" />
+    <Content Update="Textures\**\*" CopyToOutputDirectory="PreserveNewest" TargetPath="..\%(Identity)" />
   </ItemGroup>
   <ItemGroup />
 </Project>
