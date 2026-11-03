@@ -48,4 +48,8 @@
 		<None Update="Textures\**\*" CopyToOutputDirectory="PreserveNewest" TargetPath="..\%(Identity)" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Source\ConditionalResearch\" />
+	</ItemGroup>
+
 </Project>
