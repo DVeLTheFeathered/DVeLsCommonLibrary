@@ -1,16 +1,17 @@
-﻿using HarmonyLib;
-using RimWorld;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Reflection.Emit;
-using DVeLsCommonLibrary.UserInterface;
+using HarmonyLib;
+using RimWorld;
 using UnityEngine;
 using Verse;
 
-namespace DVeLsCommonLibrary.HarmonyPatches.StatsReportUtility
+namespace DVeLsCommonLibrary.UserInterface.HarmonyPatches.StatsReportUtility
 {
+    [HarmonyPatchCategory(nameof(DCLFeature.CustomDrawStat))]
     [HarmonyPatch(typeof(RimWorld.StatsReportUtility), "DrawStatsWorker")]
     public static class DrawStatsWorkerPatch
     {
+
         [HarmonyTranspiler]
         public static IEnumerable<CodeInstruction> ReplaceDrawStatTranspiler(
             IEnumerable<CodeInstruction> instructions, ILGenerator ilGenerator)
@@ -130,10 +131,11 @@ namespace DVeLsCommonLibrary.HarmonyPatches.StatsReportUtility
             return codeMatcher.Instructions();
         }
 
+
         /// <returns>Returns height in pixels of the custom drawing</returns>
         public static float CustomDrawStats(Rect rect, StatDrawEntry statDrawEntry, StatRequest request)
         {
-            if (!(statDrawEntry?.stat?.Worker is ICustomDrawStat worker)) return 0;
+            if (statDrawEntry?.stat?.Worker is not ICustomDrawStat worker) return 0;
             return worker.CustomDraw(rect, request);
         }
 
